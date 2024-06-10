@@ -10,20 +10,73 @@ import java.util.Date;
 public class EmailVo {
 	//필드
 	private long no;
-	private String lastname;
-	private String firstname;
+	private String lastName;
+	private String firstName;
 	private String email;
 	private Date CreatedAt;
 	
 	public EmailVo(){
 	}
 
-	public EmailVo(long no, String lastname, String firstname, String email, Date createdAt) {
+	public EmailVo(long no, String lastName, String firstName, String email, Date createdAt) {
 		super();
 		this.no = no;
-		this.lastname = lastname;
-		this.firstname = firstname;
+		this.lastName = lastName;
+		this.firstName = firstName;
 		this.email = email;
 		CreatedAt = createdAt;
 	}
+	public EmailVo(String lastName,String firstName,
+			String email) {
+		this.lastName=lastName;
+		this.email=email;
+	}
+
+
+	public long getNo() {
+		return no;
+	}
+
+	public void setNo(long no) {
+		this.no = no;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Date getCreatedAt() {
+		return CreatedAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		CreatedAt = createdAt;
+	}
+	
+	@Override
+	public String toString() {
+		return "EmailVo [no=" + no + ", lastName=" + lastName + ", firstName=" + firstName + ", email=" + email
+				+ ", CreatedAt=" + CreatedAt + "]";
+	}
+
 }
